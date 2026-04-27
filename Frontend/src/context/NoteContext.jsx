@@ -6,7 +6,7 @@ export const NoteContext = createContext();
 export const useNotes = () => useContext(NoteContext);
 
 export const NoteProvider = ({ children }) => {
-  
+
   // const baseUrl = "http://localhost:4001";
   const baseUrl = "https://noteapp-y9az.onrender.com";
 
@@ -20,7 +20,7 @@ export const NoteProvider = ({ children }) => {
       setLoading(true);
 
       const res = await axios.get(
-        "http://localhost:4001/api/v1/notes/get-note",
+        `${baseUrl}/api/v1/notes/get-note`,
       );
 
       if (res.data.success) {
