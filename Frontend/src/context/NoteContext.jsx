@@ -6,7 +6,10 @@ export const NoteContext = createContext();
 export const useNotes = () => useContext(NoteContext);
 
 export const NoteProvider = ({ children }) => {
-  const baseUrl = "http://localhost:4001";
+  
+  // const baseUrl = "http://localhost:4001";
+  const baseUrl = "https://noteapp-y9az.onrender.com";
+
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
